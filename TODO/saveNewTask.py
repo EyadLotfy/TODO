@@ -1,6 +1,6 @@
-'''this module creates & saves new tasks to "task.txt" file.'''
+'''this module creates & saves new tasks to "tasks.txt" file.'''
 def save_task(task_context):
-    '''saves a new task into "task.txt" file.'''
+    '''saves a new task into "tasks.txt" file.'''
     try:
         file_handler = open('tasks.txt', 'a')
         file_handler.write('\n-%s'%task_context)
@@ -8,7 +8,7 @@ def save_task(task_context):
     except:
         return 0
 def add_new_task():
-    '''adds new task and process it to be saved in "task.txt" file.'''
+    '''adds new task and process it to be saved in "tasks.txt" file.'''
     task_context = raw_input('New task>>>')
     if save_task(task_context) == 1:
         return 1
