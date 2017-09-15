@@ -5,6 +5,7 @@ def rewrite_tasks_file(file_lines):
     file_handle.write('\r')
     for line in file_lines:
         file_handle.write('\r%s'%line)
+    print 'Task was marked [DONE]!'
     return 1
 def mark_task_as_done(line_number):
     '''This function is used to mark tasks in "tasks.txt" as "Done".'''
@@ -26,7 +27,10 @@ def mark_task_as_done(line_number):
         rewrite_tasks_file(file_lines)
         return 1
     except IOError:
-        print 'Task wasn\'t found!'
+        print 'Task was not found!'
+        return 0
+    except IndexError:
+        print 'Task was not found!'
         return 0
 def insert_task_number():
     '''This function asks the user to insert the task number to mark it as "Done".'''
@@ -39,6 +43,10 @@ def insert_task_number():
 def start():
     '''Staring function!'''
     while True:
-        mark_task_as_done(insert_task_number())
+        task_number = insert_task_number()
+        if task_number == 0 :
+            print 'Task was not found!'
+        else:
+            mark_task_as_done(task_number)
     return 1
 start()
