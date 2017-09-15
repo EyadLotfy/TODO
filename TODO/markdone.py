@@ -11,7 +11,7 @@ def mark_task_as_done(line_number):
     try:
         file_handle = open('tasks.txt', 'r')
         file_lines = file_handle.readlines()
-    except:
+    except IOError:
         print "You haven't added anything to the TODO list, yet!"
         return 0
     try:
@@ -19,11 +19,13 @@ def mark_task_as_done(line_number):
         if '[DONE]' in line_to_mark_as_done:
             print 'Task is already done!'
             return 1
+        #Applying some changes to the line in order to include\
+        #the [DONE] mark and reposition the '-' mark.
         line_to_mark_as_done = line_to_mark_as_done.replace('-', ' ')
         file_lines[line_number] = '-[DONE]' + line_to_mark_as_done
         rewrite_tasks_file(file_lines)
         return 1
-    except:
+    except IOError:
         print 'Task wasn\'t found!'
         return 0
 def insert_task_number():
@@ -31,7 +33,7 @@ def insert_task_number():
     try:
         line_number = input('Task number? [Done] >>>')
         return line_number
-    except:
+    except NameError:
         print 'Only numbers accepted!'
         return 0
 def start():

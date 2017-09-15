@@ -5,7 +5,7 @@ def save_task(task_context):
         file_handler = open('tasks.txt', 'a')
         file_handler.write('\n-%s'%task_context)
         return 1
-    except:
+    except IOError:
         return 0
 def add_new_task():
     '''adds new task and process it to be saved in "tasks.txt" file.'''

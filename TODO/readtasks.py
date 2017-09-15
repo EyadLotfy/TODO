@@ -11,7 +11,7 @@ def read_tasks():
         for line_number, line_content in enumerate(file_handle):
             if line_number is not 0:
                 print line_number, line_content
-    except:
+    except IOError:
         print "You haven't added anything to the TODO list, yet!"
     exit_the_app()
     return 1
