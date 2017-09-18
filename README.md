@@ -1,3 +1,4 @@
 # TODO
 simple TODO app made in python
-called Queedo.
+
+named Qweedo.
