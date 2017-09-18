@@ -4,7 +4,7 @@ def rewrite_tasks_file(file_lines):
     file_handle = open('tasks.txt', 'w')
     file_handle.write('\r')
     for line in file_lines:
-        file_handle.write('\r%s'%line)
+        file_handle.write('%s'%line)
     print 'Task was marked [DONE]!'
     return 1
 def mark_task_as_done(line_number):
