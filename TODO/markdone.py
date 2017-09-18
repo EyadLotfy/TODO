@@ -12,7 +12,7 @@ def mark_task_as_done(line_number):
     try:
         file_handle = open('tasks.txt', 'r')
         file_lines = file_handle.readlines()
-    except IOError:
+    except:
         print "You haven't added anything to the TODO list, yet!"
         return 0
     try:
@@ -37,7 +37,7 @@ def insert_task_number():
     try:
         line_number = input('Task number? [Done] >>>')
         return line_number
-    except NameError:
+    except:
         print 'Only numbers accepted!'
         return 0
 def start_mark_done():

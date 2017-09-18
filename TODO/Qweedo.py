@@ -19,22 +19,28 @@ def start_instructions():
     print '2 - To mark a task as done.'
     print '3 - To edit a task.'
     print '4 - To remove a certain task or clear all tasks.'
+    print '5 - To list all the available commands again.'
 start_instructions()
 while True:
-    command_number = input('command number? >>>')
-    if command_number == 0:
-        start_new_task()
-    elif command_number == 1:
-        start_read_tasks()
-    elif command_number == 2:
-        start_read_tasks()
-        start_mark_done()
-    elif command_number == 3:
-        start_read_tasks()
-        start_edit_task()
-    elif command_number == 4:
-        start_read_tasks()
-        start_delete_task()
-    else:
-        print 'command wasn not recognized.'
+    try:
+        command_number = input('command number? >>>')
+        if command_number == 0:
+            start_new_task()
+        elif command_number == 1:
+            start_read_tasks()
+        elif command_number == 2:
+            start_read_tasks()
+            start_mark_done()
+        elif command_number == 3:
+            start_read_tasks()
+            start_edit_task()
+        elif command_number == 4:
+            start_read_tasks()
+            start_delete_task()
+        elif command_number == 5:
+            start_instructions()
+        else:
+            print 'command wasn not recognized.'
+    except:
         start_instructions()
+    
