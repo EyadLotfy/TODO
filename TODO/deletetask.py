@@ -56,7 +56,7 @@ def task_number_promot():
     except:
         print 'Only numbers accepted!'
         return -1
-def start():
+def start_delete_task():
     '''Staring function.'''
     task_number = task_number_promot()
     if task_number == -200:
@@ -66,5 +66,4 @@ def start():
     if task_number != -1:
         remove_the_desired_task(reterieve_tasks(), task_number)
     return 1
-while True:
-    start()
+

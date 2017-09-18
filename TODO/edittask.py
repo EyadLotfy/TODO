@@ -48,7 +48,7 @@ def promote_user_to_insert_task_number():
         print 'Only numbers accepted!'
         return -1
     return task_number
-def start():
+def start_edit_task():
     '''Starting function.'''
     task_number = promote_user_to_insert_task_number()
     if task_number == -1:
@@ -64,5 +64,4 @@ def start():
         return 0
     update_tasks(edited_tasks)
     return 1
-while True:
-    start()
+

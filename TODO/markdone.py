@@ -40,13 +40,11 @@ def insert_task_number():
     except NameError:
         print 'Only numbers accepted!'
         return 0
-def start():
+def start_mark_done():
     '''Staring function!'''
-    while True:
-        task_number = insert_task_number()
-        if task_number == 0 :
-            print 'Task was not found!'
-        else:
-            mark_task_as_done(task_number)
+    task_number = insert_task_number()
+    if task_number == 0 :
+        print 'Task was not found!'
+    else:
+        mark_task_as_done(task_number)
     return 1
-start()

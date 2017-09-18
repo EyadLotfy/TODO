@@ -14,14 +14,10 @@ def add_new_task():
         return 1
     else:
         return 0
-def start():
+def start_new_task():
     '''starting function.'''
     if add_new_task() == 1:
         return 1
     else:
         return 0
-while True:
-    if start() == 1:
-        print 'New task was saved!'
-    else:
-        print 'Some failure occured!'
+
