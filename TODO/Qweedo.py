@@ -4,12 +4,14 @@ from readtasks import start_read_tasks
 from markdone import start_mark_done
 from edittask import start_edit_task
 from deletetask import start_delete_task
+from readtasks_user_version import start_read_tasks_for_user
 #All functions imported are listed here!
 #start_new_task()
 #start_read_tasks()
 #start_mark_done()
 #start_edit_task()
 #start_delete_task()
+#start_read_tasks_for_user()
 #All functions imported are listed here!
 def start_instructions():
     '''This function gives instructions to the user about how to use Qweedo'''
@@ -27,7 +29,7 @@ while True:
         if command_number == 0:
             start_new_task()
         elif command_number == 1:
-            start_read_tasks()
+            start_read_tasks_for_user()
         elif command_number == 2:
             start_read_tasks()
             start_mark_done()

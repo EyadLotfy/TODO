@@ -1,4 +1,5 @@
-'''This module reads the lines in the file "Tasks.txt".'''
+'''This module reads the lines in the file "Tasks.txt", in correct order to, '''
+'''This module reads the lines in the file "Tasks.txt", in correct order to, promote the user to make changes like [EDIT], [DONE], [DELETE]'''
 def exit_the_app():
     '''This function exits the app once the user hits enter.'''
     return 1
